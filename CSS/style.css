@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
+:root {
+  --primary-color: #533a7b;
+  --dark-color: #4a194c;
+  --hand-color: #9f7e69;
+  --light-color: #8484c0;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --draw-color: #f3a22d;
+  --text-color: #d9e8f1;
+  --modal-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.6;
+  background: #e5def7;
+  color: #100111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.restart-btn {
+  display: none;
+  background: var(--light-color);
+  color: #100111;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.restart-btn:hover {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-left: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.2rem;
+}
+
+.score p:first-child {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.score p:last-child {
+  background: var(--dark-color);
+  color: var(--text-color);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--hand-color);
+}
+
+.choice {
+  cursor: pointer;
+}
+
+.choice:hover {
+  margin-top: -2rem;
+  /* box-shadow: 0 10px 5px -5px  rgba(145, 92, 182, .4);*/
+}
+
+.text-win {
+  color: var(--win-color);
+}
+
+.text-lose {
+  color: var(--lose-color);
+}
+
+.text-draw {
+  color: var(--draw-color);
+}
+
+@media (max-width: 700px) {
+  .choice {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .choice {
+    font-size: 88px;
+  }
+}
